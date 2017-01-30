@@ -1,0 +1,26 @@
+{
+  "name": "clone-into",
+  "description": "Wrapper function for Firefox's cloneInto",
+  "version": "0.1.0",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "*.md"
+  ],
+  "author": {
+    "name": "Pine Mizune",
+    "email": "pinemz@gmail.com",
+    "url": "https://github.com/pine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/emoji-gen/clone-into"
+  },
+  "bugs": {
+    "url": "https://github.com/emoji-gen/clone-into/issues"
+  },
+  "homepage": "https://github.com/emoji-gen/clone-into",
+  "license": "MIT"
+}
