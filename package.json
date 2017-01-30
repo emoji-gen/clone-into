@@ -9,6 +9,9 @@
     "index.d.ts",
     "*.md"
   ],
+  "scripts": {
+    "test": "ava -v"
+  },
   "author": {
     "name": "Pine Mizune",
     "email": "pinemz@gmail.com",
@@ -22,5 +25,11 @@
     "url": "https://github.com/emoji-gen/clone-into/issues"
   },
   "homepage": "https://github.com/emoji-gen/clone-into",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^0.17.0",
+    "sinon": "^1.17.7"
+  },
+  "dependencies": {
+  }
 }
