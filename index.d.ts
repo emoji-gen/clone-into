@@ -1,6 +1,6 @@
 interface CloneIntoOptions {
-    cloneFunctions: boolean;
-    wrapReflectors: boolean;
+    cloneFunctions?: boolean;
+    wrapReflectors?: boolean;
 }
 
 declare function cloneInto<T>(
