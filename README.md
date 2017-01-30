@@ -1,7 +1,7 @@
 clone-into
 ----------
 
-:fire: Wrapper function for Firefox's cloneInto
+:fire: Wrapper function for Firefox's [cloneInto](https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils.cloneInto)
 
 ## Getting started
 
@@ -27,6 +27,10 @@ const clonedObj = cloneInto(obj, document.defaultView)
 ## Features
 
 - TypeScript built-in supports
+
+## See also
+
+- [Components.utils.cloneInto (Mozilla MDN)](https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils.cloneInto)
 
 ## License
 MIT @ [Emoji Generator](https://emoji.pine.moe/)
