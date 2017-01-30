@@ -17,7 +17,7 @@ $ npm install --save clone-into
 
 If it execute on Google Chrome or other browsers, this function return an argument obj as it is.
 
-```
+```js
 const cloneInto = require('clone-into')
 
 const obj = { data: [ 1, 2, 3 ] }
