@@ -7,7 +7,7 @@ try {
 }
 
 module.exports = function (obj, targetScope, options) {
-  if (_cloneInto) {
+  if (typeof _cloneInto === 'function') {
     return _cloneInto(obj, targetScope, options)
   } else {
     return obj
