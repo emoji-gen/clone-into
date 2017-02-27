@@ -27,7 +27,7 @@
   "homepage": "https://github.com/emoji-gen/clone-into",
   "license": "MIT",
   "devDependencies": {
-    "ava": "^0.17.0",
+    "ava": "^0.18.2",
     "sinon": "^1.17.7"
   },
   "dependencies": {}
