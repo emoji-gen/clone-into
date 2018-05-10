@@ -37,4 +37,4 @@ const clonedObj = cloneInto(obj, document.defaultView)
 - [Components.utils.cloneInto (Mozilla MDN)](https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils.cloneInto)
 
 ## License
-MIT @ [Emoji Generator](https://emoji.pine.moe/)
+MIT &copy; [Emoji Generator](https://emoji-gen.ninja/)
