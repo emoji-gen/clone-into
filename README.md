@@ -1,10 +1,11 @@
 clone-into
 ----------
 
-[![npm](https://img.shields.io/npm/v/clone-into.svg?maxAge=2592000&style=flat-square)](https://www.npmjs.org/package/clone-into)
-[![Travis](https://img.shields.io/travis/emoji-gen/clone-into/master.svg?maxAge=2592000&style=flat-square&x)](https://travis-ci.org/emoji-gen/clone-into)
-[![Dependency Status](https://img.shields.io/gemnasium/emoji-gen/clone-into.svg?maxAge=2592000&style=flat-square)](https://gemnasium.com/github.com/emoji-gen/clone-into)
-  
+[![npm](https://img.shields.io/npm/v/clone-into.svg?maxAge=2592000)](https://www.npmjs.org/package/clone-into)
+[![Build Status](https://travis-ci.org/emoji-gen/clone-into.svg?branch=master)](https://travis-ci.org/emoji-gen/clone-into)
+[![dependencies Status](https://david-dm.org/emoji-gen/clone-into/status.svg)](https://david-dm.org/emoji-gen/clone-into)
+[![devDependencies Status](https://david-dm.org/emoji-gen/clone-into/dev-status.svg)](https://david-dm.org/emoji-gen/clone-into?type=dev)
+
 :fire: Wrapper function for Firefox's [cloneInto](https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils.cloneInto)
 
 ## Getting started
