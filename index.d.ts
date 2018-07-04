@@ -1,12 +1,15 @@
 interface CloneIntoOptions {
-    cloneFunctions?: boolean;
-    wrapReflectors?: boolean;
+    cloneFunctions: boolean;
+    wrapReflectors: boolean;
 }
 
-declare function cloneInto<T>(
-    obj: T,
-    targetScope: any,
-    options?: CloneIntoOptions
-): T;
+interface CloneInto {
+  <T>(
+      obj: T,
+      targetScope: any,
+      options?: CloneIntoOptions
+  ): T;
+}
 
+declare const cloneInto: CloneInto;
 export = cloneInto;
