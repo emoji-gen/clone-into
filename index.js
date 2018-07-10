@@ -6,10 +6,12 @@ try {
   var _cloneInto = null
 }
 
-module.exports = function (obj, targetScope, options) {
-  if (typeof _cloneInto === 'function') {
+if (typeof _cloneInto === 'function') {
+  module.exports = function (obj, targetScope, options) {
     return _cloneInto(obj, targetScope, options)
-  } else {
+  };
+} else {
+  module.exports = function (obj, targetScope, options) {
     return obj
-  }
+  };
 }
