@@ -5,7 +5,7 @@ clone-into
 [![Build Status](https://travis-ci.org/emoji-gen/clone-into.svg?branch=master)](https://travis-ci.org/emoji-gen/clone-into)
 [![dependencies Status](https://david-dm.org/emoji-gen/clone-into/status.svg)](https://david-dm.org/emoji-gen/clone-into)
 [![devDependencies Status](https://david-dm.org/emoji-gen/clone-into/dev-status.svg)](https://david-dm.org/emoji-gen/clone-into?type=dev)
-[![Osushi](https://img.shields.io/badge/donate-osushi-EA2F57.svg)](https://osushi.love/intent/post/9ad90add99954e62ac79251606c10eec)
+[![Osushi](https://img.shields.io/badge/donate-osushi-EA2F57.svg)](https://osushi.love/intent/post/9ad90add99954e62ac79251606c10eec) [![Greenkeeper badge](https://badges.greenkeeper.io/emoji-gen/clone-into.svg)](https://greenkeeper.io/)
 
 :fire: Wrapper function for Firefox's [cloneInto](https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils.cloneInto)
 
