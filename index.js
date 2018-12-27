@@ -1,6 +1,6 @@
 'use strict'
 
-var global = (0,eval)('this')
+var global = (0, eval)('this')
 
 if (typeof global.cloneInto === 'function') {
   module.exports = global.cloneInto
