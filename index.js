@@ -1,17 +1,11 @@
 'use strict'
 
-try {
-  var _cloneInto = cloneInto
-} catch (e) {
-  var _cloneInto = null
-}
+var global = (0,eval)('this')
 
-if (typeof _cloneInto === 'function') {
-  module.exports = function (obj, targetScope, options) {
-    return _cloneInto(obj, targetScope, options)
-  };
+if (typeof global.cloneInto === 'function') {
+  module.exports = global.cloneInto
 } else {
-  module.exports = function (obj, targetScope, options) {
+  module.exports = function (obj) {
     return obj
-  };
+  }
 }
