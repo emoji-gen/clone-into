@@ -1,44 +1,41 @@
 'use strict'
 
-import fs from 'fs'
-import path from 'path'
-import vm from 'vm'
+const fs = require('fs')
+const path = require('path')
+const vm = require('vm')
 
-import test from 'ava'
-import sinon from 'sinon'
-
-const opts   = { encoding: 'utf-8' }
+const opts = { encoding: 'utf-8' }
 const source = fs.readFileSync(path.join(__dirname, 'index.js'), opts)
 
-test('in firefox', t => {
+test('in firefox', () => {
   const context = {
     module: {},
-    cloneInto: sinon.spy(obj => obj),
+    cloneInto: jest.fn(obj => obj),
   }
   vm.createContext(context)
   vm.runInContext(source, context)
 
-  const obj         = { foo: 1 }
+  const obj = { foo: 1 }
   const targetScope = { bar: 2 }
-  const result      = context.module.exports(obj, targetScope)
+  const result = context.module.exports(obj, targetScope)
 
-  t.deepEqual(result, obj)
-  t.true(context.cloneInto.called)
-  t.deepEqual(context.cloneInto.args[0][0], obj)
-  t.deepEqual(context.cloneInto.args[0][1], targetScope)
-  t.deepEqual(context.cloneInto.args[0][2], undefined)
+  expect(result).toBe(obj)
+  expect(context.cloneInto).toBeCalled()
+  expect(context.cloneInto.mock.calls[0][0]).toBe(obj)
+  expect(context.cloneInto.mock.calls[0][1]).toBe(targetScope)
+  expect(context.cloneInto.mock.calls[0][2]).toBeUndefined()
 })
 
-test('in not firefox', t => {
+test('in not firefox', () => {
   const context = {
     module: {},
   }
   vm.createContext(context)
   vm.runInContext(source, context)
 
-  const obj         = { foo: 1 }
+  const obj = { foo: 1 }
   const targetScope = { bar: 2 }
-  const result      = context.module.exports(obj, targetScope)
+  const result = context.module.exports(obj, targetScope)
 
-  t.deepEqual(result, obj)
+  expect(result).toBe(obj)
 })

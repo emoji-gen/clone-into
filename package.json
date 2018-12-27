@@ -10,7 +10,7 @@
     "*.md"
   ],
   "scripts": {
-    "test": "ava -v"
+    "test": "jest"
   },
   "author": {
     "name": "Pine Mizune",
@@ -28,6 +28,7 @@
   "license": "MIT",
   "devDependencies": {
     "ava": "^1.0.1",
+    "jest": "^23.6.0",
     "sinon": "^7.2.2"
   }
 }
