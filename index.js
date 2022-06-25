@@ -1,9 +1,7 @@
 'use strict'
 
-var global = (0, eval)('this')
-
-if (typeof global.cloneInto === 'function') {
-  module.exports = global.cloneInto
+if (typeof globalThis.cloneInto === 'function') {
+  module.exports = globalThis.cloneInto
 } else {
   module.exports = function (obj) {
     return obj
