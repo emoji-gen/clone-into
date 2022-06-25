@@ -3,11 +3,7 @@ clone-into
 
 [![npm](https://img.shields.io/npm/v/clone-into.svg?maxAge=2592000)](https://www.npmjs.org/package/clone-into)
 [![Build Status](https://travis-ci.org/emoji-gen/clone-into.svg?branch=master)](https://travis-ci.org/emoji-gen/clone-into)
-[![dependencies Status](https://david-dm.org/emoji-gen/clone-into/status.svg)](https://david-dm.org/emoji-gen/clone-into)
-[![devDependencies Status](https://david-dm.org/emoji-gen/clone-into/dev-status.svg)](https://david-dm.org/emoji-gen/clone-into?type=dev)
-[![Greenkeeper badge](https://badges.greenkeeper.io/emoji-gen/clone-into.svg)](https://greenkeeper.io/)
 [![License](https://img.shields.io/github/license/emoji-gen/clone-into.svg)](LICENSE)
-[![Beerpay](https://beerpay.io/emoji-gen/clone-into/badge.svg?style=flat)](https://beerpay.io/emoji-gen/clone-into)
 
 :fire: Wrapper function for Firefox's [cloneInto](https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils.cloneInto)
 
