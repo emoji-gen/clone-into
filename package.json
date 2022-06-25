@@ -1,5 +1,5 @@
 {
-  "name": "clone-into",
+  "name": "@emoji-gen/clone-into",
   "description": "Wrapper function for Firefox's cloneInto",
   "version": "0.2.0",
   "main": "index.js",
@@ -28,5 +28,8 @@
     "url": "https://github.com/emoji-gen/clone-into/issues"
   },
   "homepage": "https://github.com/emoji-gen/clone-into",
-  "license": "MIT"
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
 }
