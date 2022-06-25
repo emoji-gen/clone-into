@@ -2,7 +2,7 @@ clone-into
 ----------
 
 [![npm](https://img.shields.io/npm/v/clone-into.svg?maxAge=2592000)](https://www.npmjs.org/package/clone-into)
-[![Build Status](https://travis-ci.org/emoji-gen/clone-into.svg?branch=master)](https://travis-ci.org/emoji-gen/clone-into)
+[![test](https://github.com/emoji-gen/clone-into/actions/workflows/build.yml/badge.svg)](https://github.com/emoji-gen/clone-into/actions/workflows/build.yml)
 [![License](https://img.shields.io/github/license/emoji-gen/clone-into.svg)](LICENSE)
 
 :fire: Wrapper function for Firefox's [cloneInto](https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils.cloneInto)
