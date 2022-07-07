@@ -1,11 +1,11 @@
 'use strict'
 
-const fs = require('fs')
-const path = require('path')
+import fs from 'fs'
+import path from 'path'
 const vm = require('vm')
 
 const opts = { encoding: 'utf-8' }
-const source = fs.readFileSync(path.join(__dirname, 'index.js'), opts)
+const source = fs.readFileSync(path.join(__dirname, '../dist/index.js'), opts)
 
 test('in firefox', () => {
   const context = {
