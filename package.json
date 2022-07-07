@@ -1,21 +1,23 @@
 {
   "name": "@emoji-gen/clone-into",
+  "version": "0.3.0",
   "description": "Wrapper function for Firefox's cloneInto",
-  "version": "0.2.0",
   "main": "index.js",
   "types": "index.d.ts",
   "files": [
-    "index.js",
-    "index.d.ts",
-    "*.md"
+    "dist/**/*.d.ts",
+    "dist/**/*.js",
+    "dist/**/*.mjs"
   ],
   "scripts": {
     "test": "jest",
-    "build": "tsup src/index.ts --dts --format esm,cjs --target es5"
+    "build": "tsup src/index.ts --dts --format esm,cjs --target es5",
+    "prepare": "npm-run-all build"
   },
   "devDependencies": {
     "@swc/core": "^1.2.210",
     "jest": "^28.1.1",
+    "npm-run-all": "^4.1.5",
     "tsup": "^6.1.2",
     "typescript": "^4.7.4"
   },
