@@ -22,7 +22,21 @@ const clonedObj = cloneInto(obj, document.defaultView)
 
 ## Features
 
-- TypeScript built-in supports
+- Supports TypeScript
+- Supports both CommonJS and ESModules
+
+## Development
+### Build
+
+```
+$ yarn run build
+```
+
+### Test
+
+```
+$ yarn test
+```
 
 ## License
 MIT &copy; [Emoji Generator](https://emoji-gen.ninja/)
