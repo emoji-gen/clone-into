@@ -1,14 +1,13 @@
 'use strict'
 
-import fs from 'fs'
-import path from 'path'
-const vm = require('vm')
+import fs from 'node:fs'
+import path from 'node:path'
+import vm from 'node:vm'
 
-const opts = { encoding: 'utf-8' }
-const source = fs.readFileSync(path.join(__dirname, '../dist/index.js'), opts)
+const source = fs.readFileSync(path.join(__dirname, '../dist/index.js'), 'utf-8')
 
 test('in firefox', () => {
-  const context = {
+  const context: any = {
     module: {},
     cloneInto: jest.fn(obj => obj),
   }
@@ -17,7 +16,7 @@ test('in firefox', () => {
 
   const obj = { foo: 1 }
   const targetScope = { bar: 2 }
-  const result = context.module.exports(obj, targetScope)
+  const result = context.module.exports.cloneInto(obj, targetScope)
 
   expect(result).toBe(obj)
   expect(context.cloneInto).toBeCalled()
@@ -27,7 +26,7 @@ test('in firefox', () => {
 })
 
 test('in not firefox', () => {
-  const context = {
+  const context: any = {
     module: {},
   }
   vm.createContext(context)
@@ -35,7 +34,7 @@ test('in not firefox', () => {
 
   const obj = { foo: 1 }
   const targetScope = { bar: 2 }
-  const result = context.module.exports(obj, targetScope)
+  const result = context.module.exports.cloneInto(obj, targetScope)
 
   expect(result).toBe(obj)
 })
