@@ -14,7 +14,7 @@ $ yarn add @emoji-gen/clone-into           # for yarn users
 If it execute on Google Chrome or other browsers, this function return an argument obj as it is.
 
 ```js
-const cloneInto = require('@emoji-gen/clone-into')
+import { cloneInto } from '@emoji-gen/clone-into'
 
 const obj = { data: [ 1, 2, 3 ] }
 const clonedObj = cloneInto(obj, document.defaultView)
