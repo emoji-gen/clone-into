@@ -1,4 +1,4 @@
-# clone-into &nbsp;[![npm](https://img.shields.io/npm/v/@emoji-gen/clone-into.svg?maxAge=2592000)](https://www.npmjs.org/package/@emoji-gen/clone-into) [![test](https://github.com/emoji-gen/clone-into/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/emoji-gen/clone-into/actions/workflows/build.yml) [![License](https://img.shields.io/github/license/emoji-gen/clone-into.svg)](LICENSE)
+# clone-into &nbsp;[![npm](https://img.shields.io/npm/v/@emoji-gen/clone-into.svg?maxAge=2592000)](https://www.npmjs.org/package/@emoji-gen/clone-into) [![build](https://github.com/emoji-gen/clone-into/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/emoji-gen/clone-into/actions/workflows/build.yml) [![License](https://img.shields.io/github/license/emoji-gen/clone-into.svg)](LICENSE)
 
 :fire: Wrapper function for Firefox's [cloneInto](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts)
 <br>
