@@ -1,17 +1,22 @@
-name: build
+name: test
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 on:
   - push
   - pull_request
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     strategy:
       matrix:
         node-version:
-          - 14
-          - 16
-          - 18
+          - 20
+          - 22
+          - 24
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
