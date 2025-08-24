@@ -18,7 +18,7 @@
     "test": "jest",
     "build": "tsup src/index.ts --dts --format esm,cjs --target es5",
     "clean": "rimraf dist",
-    "prepare": "run-s clean build"
+    "prepack": "run-s clean build"
   },
   "devDependencies": {
     "@swc/core": "^1.2.210",
