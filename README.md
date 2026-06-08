@@ -7,8 +7,7 @@
 ## Getting started
 
 ```sh
-$ npm install --save @emoji-gen/clone-into # for npm users
-$ yarn add @emoji-gen/clone-into           # for yarn users
+$ npm install --save @emoji-gen/clone-into
 ```
 
 If it execute on Google Chrome or other browsers, this function return an argument obj as it is.
@@ -29,13 +28,13 @@ const clonedObj = cloneInto(obj, document.defaultView)
 ### Build
 
 ```
-$ yarn run build
+$ npm run build
 ```
 
 ### Test
 
 ```
-$ yarn test
+$ npm test
 ```
 
 ## License
