@@ -1,4 +1,4 @@
-name: test
+name: Test
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -23,8 +23,8 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
-        run: yarn
+        run: npm install
       - name: Build package
-        run: yarn run build
+        run: npm run build
       - name: Run test
-        run: yarn test
+        run: npm test
