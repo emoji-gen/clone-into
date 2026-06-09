@@ -1,6 +1,6 @@
 {
   "name": "@emoji-gen/clone-into",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Wrapper function for Firefox's cloneInto",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
