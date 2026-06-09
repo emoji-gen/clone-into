@@ -37,5 +37,11 @@ $ npm run build
 $ npm test
 ```
 
+### Publish
+
+Update the version in `package.json` to the version you want to release.
+
+Then, manually trigger the [publish.yml](https://github.com/emoji-gen/clone-into/actions/workflows/publish.yml) workflow via the `workflow_dispatch` event to create a release.
+
 ## License
 MIT &copy; [Emoji Generator](https://emoji-gen.ninja/)
