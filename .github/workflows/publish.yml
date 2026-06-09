@@ -6,6 +6,11 @@ concurrency:
 
 on:
   workflow_dispatch:
+    inputs:
+      dry-run:
+        description: Dry run
+        type: boolean
+        required: true
 
 jobs:
   publish:
@@ -23,3 +28,7 @@ jobs:
         run: npm install
       - name: Publish to NPM
         run: npm publish
+        if: ${{ github.event.inputs.dry-run != 'true' }}
+      - name: Publish to NPM (Dry run)
+        run: npm publish --dry-run
+        if: ${{ github.event.inputs.dry-run == 'true' }}
