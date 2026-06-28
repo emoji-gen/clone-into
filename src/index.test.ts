@@ -2,12 +2,14 @@ import fs from 'node:fs'
 import path from 'node:path'
 import vm from 'node:vm'
 
+import { expect, rs, test } from '@rstest/core';
+
 const source = fs.readFileSync(path.join(__dirname, '../dist/index.js'), 'utf-8')
 
 test('in firefox', () => {
   const context: any = {
     module: {},
-    cloneInto: jest.fn(obj => obj),
+    cloneInto: rs.fn(obj => obj),
   }
   vm.createContext(context)
   vm.runInContext(source, context)
