@@ -17,7 +17,7 @@
   ],
   "scripts": {
     "test": "rstest",
-    "build": "tsup src/index.ts --dts --format esm,cjs --target es5",
+    "build": "tsup src/index.ts --dts --format esm,cjs",
     "clean": "rimraf dist",
     "prepack": "run-s clean build"
   },
