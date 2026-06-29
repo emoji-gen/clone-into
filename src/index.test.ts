@@ -1,40 +1,37 @@
-import fs from 'node:fs';
-import path from 'node:path';
-import vm from 'node:vm';
+import { afterEach, expect, rs, test } from '@rstest/core';
 
-import { expect, rs, test } from '@rstest/core';
-
-const source = fs.readFileSync(path.join(__dirname, '../dist/index.js'), 'utf-8');
-
-test('in firefox', () => {
-  const context: any = {
-    module: {},
-    cloneInto: rs.fn((obj) => obj),
-  };
-  vm.createContext(context);
-  vm.runInContext(source, context);
-
-  const obj = { foo: 1 };
-  const targetScope = { bar: 2 };
-  const result = context.module.exports.cloneInto(obj, targetScope);
-
-  expect(result).toBe(obj);
-  expect(context.cloneInto).toBeCalled();
-  expect(context.cloneInto.mock.calls[0][0]).toBe(obj);
-  expect(context.cloneInto.mock.calls[0][1]).toBe(targetScope);
-  expect(context.cloneInto.mock.calls[0][2]).toBeUndefined();
+afterEach(() => {
+  rs.resetModules();
+  rs.unstubAllGlobals();
 });
 
-test('in not firefox', () => {
-  const context: any = {
-    module: {},
-  };
-  vm.createContext(context);
-  vm.runInContext(source, context);
+test('in firefox', async () => {
+  const mock = rs.fn((obj, targetScope, options) => obj);
+  rs.stubGlobal('cloneInto', mock);
+
+  const { cloneInto } = await import('./index.js');
+
+  expect(rs.isMockFunction(cloneInto)).toBe(true);
 
   const obj = { foo: 1 };
   const targetScope = { bar: 2 };
-  const result = context.module.exports.cloneInto(obj, targetScope);
+  const result = cloneInto(obj, targetScope);
+
+  expect(result).toBe(obj);
+  expect(mock).toBeCalled();
+  expect(mock.mock.calls[0][0]).toBe(obj);
+  expect(mock.mock.calls[0][1]).toBe(targetScope);
+  expect(mock.mock.calls[0][2]).toBeUndefined();
+});
+
+test('in not firefox', async () => {
+  const { cloneInto } = await import('./index.js');
+
+  expect(rs.isMockFunction(cloneInto)).toBe(false);
+
+  const obj = { foo: 1 };
+  const targetScope = { bar: 2 };
+  const result = cloneInto(obj, targetScope);
 
   expect(result).toBe(obj);
 });
