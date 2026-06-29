@@ -18,7 +18,7 @@
   "scripts": {
     "format:check": "prettier . --check",
     "format:fix": "prettier . --write",
-    "test": "run-p test:types test:unit format:check",
+    "test": "run-s test:types test:unit format:check",
     "test:types": "tsc --noEmit",
     "test:unit": "rstest",
     "build": "tsup src/index.ts --dts --format esm,cjs",
