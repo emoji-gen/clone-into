@@ -5,16 +5,16 @@ interface CloneIntoOptions {
 
 type CloneInto = <T>(obj: T, targetScope: any, options?: CloneIntoOptions) => T;
 
-function getCloneInto() : CloneInto {
+function getCloneInto(): CloneInto {
   // @ts-ignore
   if (typeof globalThis.cloneInto === 'function') {
     // @ts-ignore
-    return globalThis.cloneInto
+    return globalThis.cloneInto;
   }
 
   return <T>(obj: T, targetScope: any, options?: CloneIntoOptions) => {
-    return obj
-  }
+    return obj;
+  };
 }
 
-export const cloneInto = getCloneInto()
+export const cloneInto = getCloneInto();

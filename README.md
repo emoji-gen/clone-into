@@ -13,10 +13,10 @@ $ npm install --save @emoji-gen/clone-into
 If it execute on Google Chrome or other browsers, this function return an argument obj as it is.
 
 ```js
-import { cloneInto } from '@emoji-gen/clone-into'
+import { cloneInto } from '@emoji-gen/clone-into';
 
-const obj = { data: [ 1, 2, 3 ] }
-const clonedObj = cloneInto(obj, document.defaultView)
+const obj = { data: [1, 2, 3] };
+const clonedObj = cloneInto(obj, document.defaultView);
 ```
 
 ## Features
@@ -25,6 +25,7 @@ const clonedObj = cloneInto(obj, document.defaultView)
 - Supports both CommonJS and ESModules
 
 ## Development
+
 ### Build
 
 ```
@@ -44,4 +45,5 @@ Update the version in `package.json` to the version you want to release.
 Then, manually trigger the [publish.yml](https://github.com/emoji-gen/clone-into/actions/workflows/publish.yml) workflow via the `workflow_dispatch` event to create a release.
 
 ## License
+
 MIT &copy; [Emoji Generator](https://emoji-gen.ninja/)
