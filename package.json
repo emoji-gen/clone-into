@@ -16,9 +16,9 @@
     "dist"
   ],
   "scripts": {
-    "test": "run-s test:*",
-    "test:format": "prettier . --check",
-    "test:format:fix": "prettier . --write",
+    "format": "prettier . --check",
+    "format:fix": "prettier . --write",
+    "test": "run-p format test:*",
     "test:types": "tsc --noEmit",
     "test:unit": "rstest",
     "build": "tsup src/index.ts --dts --format esm,cjs",
